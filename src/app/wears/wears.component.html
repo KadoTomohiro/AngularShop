@@ -1,0 +1,14 @@
+<header>
+  <h2>{{category}}</h2>
+  <p>{{(wears | async)?.length}} items</p>
+</header>
+
+<ul>
+  <li *ngFor="let wear of wears | async">
+    <a routerLink="/detail/{{wear.name}}">
+      <img src="/assets/images/{{category}}/{{wear.image}}" alt="{{wear.title}}">
+      <h3>{{wear.title}}</h3>
+      <div>${{wear.price}}</div>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+
+<img src="/assets/images/{{wear.category}}/{{wear.image}}" alt="{{wear.title}}">
+
+<h2>{{wear.title}}</h2>
+<p>${{wear.price}}</p>
+<dl>
+  <dt>Description</dt>
+  <dd>{{wear.description}}</dd>
+  <dt>Features</dt>
+  <dd>
+    <ul>
+      <li *ngFor="let feature of wear.Features">{{feature}}</li>
+    </ul>
+  </dd>
+</dl>
